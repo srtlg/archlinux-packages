@@ -1,0 +1,23 @@
+pkgbase = crrcsim-git
+	pkgdesc = Model airplane flight simulation program.
+	pkgver = 0.9.13.3.r4.gb53bce8
+	pkgrel = 1
+	url = http://sourceforge.net/projects/crrcsim/
+	arch = i686
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	makedepends = gawk
+	makedepends = plib>=1.8.4
+	depends = sdl>=1.2.5
+	depends = portaudio
+	depends = libjpeg
+	depends = cgal
+	provides = crrcsim
+	conflicts = crrcsim
+	source = git+https://salsa.debian.org/debian/crrcsim.git
+	source = 01_fix_ostream_error.patch
+	sha256sums = SKIP
+	sha256sums = 9ca4ee837133e8b93b12ce3ef7c55c1801be02b93b234cb1f72cc91d38a88805
+
+pkgname = crrcsim-git
