@@ -5,7 +5,7 @@
 pkgbase=wxwidgets-3.0
 pkgname=(wxwidgets-gtk2-3.0 wxwidgets-gtk3-3.0 wxwidgets-common-3.0)
 pkgver=3.0.5
-pkgrel=3
+pkgrel=4
 arch=(x86_64)
 url="https://wxwidgets.org"
 license=('custom:wxWindows')
@@ -25,7 +25,7 @@ build() {
   ./configure --prefix=/opt/wxgtk-3.0 --libdir=/opt/wxgtk-3.0/lib --with-gtk=2 --with-opengl --enable-unicode \
     --enable-graphics_ctx --enable-mediactrl --with-regex=builtin \
     --with-libpng=sys --with-libxpm=sys --with-libjpeg=sys --with-libtiff=sys \
-    --disable-precomp-headers
+    --disable-precomp-headers --enable-compat28
   make
   make -C locale allmo
 
@@ -33,7 +33,7 @@ build() {
   ./configure --prefix=/opt/wxgtk-3.0 --libdir=/opt/wxgtk-3.0/lib --with-gtk=3 --with-opengl --enable-unicode \
     --enable-graphics_ctx --enable-mediactrl --enable-webview --with-regex=builtin \
     --with-libpng=sys --with-libxpm=sys --with-libjpeg=sys --with-libtiff=sys \
-    --disable-precomp-headers
+    --disable-precomp-headers --enable-compat28
   make
 }
 
